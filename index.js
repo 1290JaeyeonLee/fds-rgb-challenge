@@ -36,27 +36,34 @@ const boxes = document.querySelectorAll('.box');
 //클릭 했을때 맞으면 alert 틀리면 alert
 boxes.forEach((el, index) => {
   el.addEventListener('click', () => {
+    el.classList.add('large');
     if(correctAnswer === index){
       document.querySelector('.modal.right').classList.add('show');
       score++;
     } else {
+      document.querySelector('.last-score').textContent = score;
       document.querySelector('.modal.wrong').classList.add('show');
       score = 0;
     }
     document.querySelector('.score').textContent = score;
-    newStage();
   })
 })
 
 document.querySelector('.modal.right .close').addEventListener('click', () => {
+  newStage();
+  boxes.forEach(el => {
+    el.classList.remove('large');
+  })
   document.querySelector('.modal.right').classList.remove('show');
 })
 
 document.querySelector('.modal.wrong .close').addEventListener('click', () => {
+  newStage();
+  boxes.forEach(el => {
+    el.classList.remove('large');
+  })
   document.querySelector('.modal.wrong').classList.remove('show');
 })
 
 newStage();
-
-
 

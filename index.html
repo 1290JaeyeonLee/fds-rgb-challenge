@@ -4,25 +4,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>FDS - RGB Challenge</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,800" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
   <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-  <div class="score"></div>
-  <div class="color-code"></div>
-  <div class="box-container">
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-  </div>
-  <div class="modal right">
-    THAT'S RIGHT!
-    <button class="close">NEXT COLOR</button>
-  </div>
-  <div class="modal wrong">
-      TOO BAD :(
+  <header>
+    <h1>THE GREAT <strong>RGB</strong>GUESSING CHALLENGE</h1>
+  </header>
+  <div class="container">
+    <p class="current-score">SCORE: <span class="score"></span></p>
+    <div class="code-box-container">
+      <div class="color-code"></div>
+      <div class="box-container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+    </div>
+    <div class="modal right">
+      <div class="modal-container">
+        <p class="result">THAT'S RIGHT!</p>
+        <button class="close">NEXT COLOR</button>
+      </div>
+    </div>
+    <div class="modal wrong">
+      <div class="modal-container">
+      <p class="result">TOO BAD :(</p>
+        <p>SCORE: <span class="last-score"></span></p>
       <button class="close">PLAY AGAIN</button>
-    </div>  
+      </div>
+    </div>
+  </div>  
   <script src="./index.js"></script>
 </body>
 </html>
