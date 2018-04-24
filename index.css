@@ -94,6 +94,7 @@ h1 strong {
 .modal .result {
   font-size: 52px;
   line-height: 62px;
+  text-align: center;
 }
 .close {
   width: 130px;
